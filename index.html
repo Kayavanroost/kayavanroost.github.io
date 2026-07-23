@@ -1,14 +1,308 @@
-html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My GitHub Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kaya Van Roost</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#FAFAF8;
+    --text:#1b1b1b;
+    --muted:#707070;
+    --border:#e8e8e8;
+    --accent:#0F5EA8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Inter,sans-serif;
+    line-height:1.7;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:30px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(250,250,248,.82);
+    backdrop-filter:blur(18px);
+    z-index:100;
+}
+
+nav a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.logo{
+    font-weight:600;
+}
+
+.links{
+    display:flex;
+    gap:40px;
+}
+
+.links a:hover{
+    color:var(--accent);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 8%;
+}
+
+.hero-inner{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:clamp(64px,9vw,110px);
+    line-height:.95;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    font-size:28px;
+    font-weight:400;
+    color:var(--muted);
+    margin-bottom:45px;
+}
+
+.hero p{
+    font-size:22px;
+    max-width:760px;
+    color:#444;
+    margin-bottom:50px;
+}
+
+.buttons{
+    display:flex;
+    gap:18px;
+}
+
+.button{
+    padding:15px 28px;
+    border:1px solid var(--border);
+    border-radius:999px;
+    text-decoration:none;
+    color:var(--text);
+    transition:.25s;
+}
+
+.button:hover{
+    background:var(--text);
+    color:white;
+}
+
+section{
+    max-width:900px;
+    margin:auto;
+    padding:140px 8%;
+}
+
+section h2{
+    font-size:48px;
+    margin-bottom:35px;
+}
+
+.about p{
+    font-size:20px;
+    color:#444;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:35px;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 50px rgba(0,0,0,.08);
+}
+
+.card h3{
+    margin-bottom:14px;
+    font-size:26px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+footer{
+    padding:80px;
+    text-align:center;
+    border-top:1px solid var(--border);
+}
+
+footer a{
+    margin:0 16px;
+    color:inherit;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:var(--accent);
+}
+
+@media(max-width:700px){
+
+.links{
+display:none;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+section h2{
+font-size:36px;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my brand new website hosted on GitHub Pages.</p>
+
+<nav>
+
+<a class="logo" href="#">Kaya Van Roost</a>
+
+<div class="links">
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#">CV</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<header class="hero">
+
+<div class="hero-inner">
+
+<h1>Kaya<br>Van Roost</h1>
+
+<h2>
+Epidemiologist · Legal Epidemiologist
+</h2>
+
+<p>
+
+I study how law and public policy shape population health through legal epidemiology, with research spanning reproductive health, infectious disease, and correctional health.
+
+</p>
+
+<div class="buttons">
+<a class="button" href="#research">Research</a>
+<a class="button" href="#">Curriculum Vitae</a>
+</div>
+
+</div>
+
+</header>
+
+<section id="about" class="about">
+
+<h2>About</h2>
+
+<p>
+
+I am a Postdoctoral Fellow at the Drexel Dornsife School of Public Health. My research examines how laws, institutions, and public policy influence health equity. I combine policy surveillance, epidemiologic methods, and causal inference to evaluate the health impacts of public policy across diverse domains including reproductive health and correctional health.
+
+</p>
+
+</section>
+
+<section id="research">
+
+<h2>Research</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Child Marriage & Reproductive Health</h3>
+<p>
+Understanding how law, pregnancy, and social policy shape early family formation and reproductive health.
+</p>
+</div>
+
+<div class="card">
+<h3>Legal Epidemiology</h3>
+<p>
+Using policy surveillance and quasi-experimental methods to evaluate the effects of law on population health.
+</p>
+</div>
+
+<div class="card">
+<h3>Prison Health Policy</h3>
+<p>
+Research on infectious disease screening, treatment, and implementation within correctional systems.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<footer id="contact">
+
+<p>
+
+<a href="mailto:YOUR_EMAIL">Email</a>
+
+<a href="#">Google Scholar</a>
+
+<a href="#">ORCID</a>
+
+<a href="https://github.com/Kayavanroost">GitHub</a>
+
+<a href="#">LinkedIn</a>
+
+</p>
+
+</footer>
+
 </body>
 </html>
-
-
-
