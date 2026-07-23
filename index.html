@@ -29,12 +29,36 @@
 html{
     scroll-behavior:smooth;
 }
+.profile{
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+
 .headshot{
-    width:220px;
-    height:220px;
+    width:240px;
+    height:240px;
     object-fit:cover;
-    border-radius:50%;
-    margin-bottom:35px;
+    border-radius:12px;
+    flex-shrink:0;
+}
+
+.profile-text{
+    flex:1;
+}
+
+@media(max-width:700px){
+
+.profile{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.headshot{
+    width:200px;
+    height:200px;
+}
+
 }
 body{
     background:var(--bg);
@@ -218,7 +242,7 @@ font-size:36px;
 <div class="links">
 <a href="#about">About</a>
 <a href="#research">Research</a>
-<a href="#">CV</a>
+<a href="Academic_CV.pdf" target="_blank">CV</a>
 <a href="#contact">Contact</a>
 </div>
 
@@ -228,7 +252,11 @@ font-size:36px;
 
 <div class="hero-inner">
 
-<img class="headshot" src="images/headshot.png.jpg" alt="Kaya Van Roost">
+<div class="profile">
+
+<img class="headshot" src="images/headshot.jpg" alt="Kaya Van Roost">
+
+<div class="profile-text">
 
 <h1>Kaya<br>Van Roost</h1>
 
@@ -244,6 +272,8 @@ I am a post-doctoral fellow in epidemiology at the Urban Health Collaborative at
 <div class="buttons">
 <a class="button" href="#research">Research</a>
 <a class="button" href="#">Curriculum Vitae</a>
+</div>
+
 </div>
 
 </div>
@@ -282,13 +312,6 @@ Using policy surveillance and quasi-experimental methods to evaluate the effects
 </p>
 </div>
 
-<div class="card">
-<h3>Prison Health Policy</h3>
-<p>
-Research on infectious disease screening, treatment, and implementation within correctional systems.
-</p>
-</div>
-
 </div>
 
 </section>
@@ -303,8 +326,10 @@ Research on infectious disease screening, treatment, and implementation within c
 Google Scholar
 </a>
 
-<a href="#">ORCID</a>
-
+<a href="https://orcid.org/0000-0002-5860-745X" target="_blank">
+ORCID
+</a>
+    
 <a href="https://github.com/Kayavanroost" target="_blank">
 GitHub
 </a>
